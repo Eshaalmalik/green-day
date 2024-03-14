@@ -4,7 +4,7 @@ import { profileTeam } from '../../GDItems';
 const TeamCard = () => {
   return (
     <>
-      <h1 className="heading">OUR TEAM</h1>
+      <h1 className="heading">OUR TEAMS</h1>
       <div className="team-cards">
         {profileTeam.map((pitem) => {
           return (
