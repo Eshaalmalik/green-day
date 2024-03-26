@@ -5,9 +5,9 @@ const SponsorBox = () => {
     <>
       <h1 className="heading">Our Partners</h1>
       <div className="part-box">
-        {partnerData.map((partitem) => {
+        {partnerData.map((partitem, id) => {
           return (
-            <div className="part-img-box">
+            <div className="part-img-box" key={`sponsor-${id}`}>
               <img src={partitem.p_img} alt="" className="part-img" />
             </div>
           );

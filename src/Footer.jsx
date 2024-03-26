@@ -14,9 +14,9 @@ const Footer = () => {
           </p>
           <hr />
           <div className="contact-way">
-            {contactWayData.map((citem) => {
+            {contactWayData.map((citem, index) => {
               return (
-                <div className="contact">
+                <div className="contact" key={`contact-${index}`}>
                   {citem.contact_icon}
                   {citem.contact}
                 </div>
@@ -35,8 +35,12 @@ const Footer = () => {
             <input type="text" name="" id="" placeholder="SUBSCRIBE" className="footer-inputs " />
             <div className="social">
               <p>Follow US</p>
-              {contactSocialItem.map((sitem) => {
-                return <div className="social-icon">{sitem.s_icon}</div>;
+              {contactSocialItem.map((sitem, index) => {
+                return (
+                  <div className="social-icon" key={`social-${index}`}>
+                    {sitem.s_icon}
+                  </div>
+                );
               })}
             </div>
           </div>
@@ -44,9 +48,9 @@ const Footer = () => {
         <div className="right-footer">
           <p className="f-heading">Gallery</p>
           <div className="footer-gallery">
-            {fGallery.map((gitem) => {
+            {fGallery.map((gitem, index) => {
               return (
-                <div className="gallery-img">
+                <div className="gallery-img" key={`social1-${index}`}>
                   <img src={gitem.footer_gallery_img} alt="" />
                 </div>
               );

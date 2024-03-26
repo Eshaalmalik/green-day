@@ -1,10 +1,10 @@
 import React from 'react';
 
 import VegiesGallery from './VegiesGallery';
-const Vegies = () => {
+const Vegies = ({ clickHandler }) => {
   return (
     <div className="product-container .container">
-      <VegiesGallery />
+      <VegiesGallery clickHandler={clickHandler} />
     </div>
   );
 };

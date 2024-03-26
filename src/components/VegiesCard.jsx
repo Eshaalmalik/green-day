@@ -1,16 +1,30 @@
 import React from 'react';
 
-const VegiesCard = ({ p_img, p_name, p_price, p_discount }) => {
+const VegiesCard = ({ product_img, product_name, p_discount, product_price, id, clickHandler }) => {
+  console.log('clickHandler-vegiesdata', clickHandler);
   return (
-    <div className="product-box">
-      <img src={p_img} alt="" className="p-img" />
+    <div className="product-box" key={`vegies-${id}`}>
+      <button
+        className="cart-btn"
+        onClick={() =>
+          clickHandler({
+            product_img,
+            product_name,
+            product_price,
+            product_quantity: 1,
+          })
+        }>
+        Add to Cart
+      </button>
+
+      <img src={product_img} alt="" className="p-img" />
       <div className="p-box-content">
-        <p>{p_name}</p>
+        <p>{product_name}</p>
         <span className="price">
-          <del>{p_price}</del>
+          <del>{p_discount}</del>
         </span>
         &nbsp;
-        <span>{p_discount}</span>
+        <span>{product_price}</span>
       </div>
     </div>
   );

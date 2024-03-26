@@ -1,26 +1,25 @@
 import React from 'react';
 import { productFruits } from '../../GDItems';
-const FruitsGallery = () => {
+const FruitsGallery = ({ clickHandler }) => {
   return (
     <>
       <div className="right-product-section">
-        {productFruits.map((pitem) => {
-          return (
-            <>
-              <div className="product-box">
-                <img src={pitem.p_img} alt="" className="p-img" />
-                <div className="p-box-content">
-                  <p>{pitem.p_name}</p>
-                  <span className="price">
-                    <del>{pitem.p_price}</del>
-                  </span>
-                  &nbsp;
-                  <span>{pitem.p_discount}</span>
-                </div>
-              </div>
-            </>
-          );
-        })}
+        {productFruits.map((pitem, index) => (
+          <div className="product-box" key={`fruits-${index}`}>
+            <button className="cart-btn" onClick={() => clickHandler(pitem)}>
+              Add to Cart
+            </button>
+            <img src={pitem.product_img} alt="" className="p-img" />
+            <div className="p-box-content">
+              <p>{pitem.product_name}</p>
+              <span className="price">
+                <del>{pitem.p_discount}</del>
+              </span>
+              &nbsp;
+              <span>{pitem.product_price}</span>
+            </div>
+          </div>
+        ))}
       </div>
       <div className="left-product-section fruit-img">
         <div className="left-p-content">

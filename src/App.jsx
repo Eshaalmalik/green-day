@@ -13,16 +13,23 @@ import Testimonial from './components/Testimonial';
 import Vegies from './components/Vegies';
 import Contact from './Contact';
 import Footer from './Footer';
+import { useState } from 'react';
+import Arraymethods from './Arraymethods';
 
 function App() {
+  const [product, setProduct] = useState({});
+  const clickHandler = (product) => {
+    console.log('product: ', product);
+    setProduct(product);
+  };
   return (
     <>
-      <Header />
+      <Header product={product} />
       <Hero />
       <Features />
-      <Vegies />
+      <Vegies clickHandler={clickHandler} />
       <Approach />
-      <Fruits />
+      <Fruits clickHandler={clickHandler} />
       <Reviews />
       <Team />
       <Testimonial />
@@ -31,6 +38,7 @@ function App() {
       <Contact />
       <Footer />
       <CopyRight />
+      <Arraymethods />
     </>
   );
 }

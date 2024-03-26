@@ -5,8 +5,8 @@ const NavItems = () => {
   return (
     <div className="nav-items">
       <ul>
-        {navItems.map((nitem) => {
-          return <li>{nitem.nav_item}</li>;
+        {navItems.map(({ nav_item, id }) => {
+          return <li key={id}>{nav_item}</li>;
         })}
       </ul>
     </div>

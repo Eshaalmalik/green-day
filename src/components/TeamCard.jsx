@@ -6,9 +6,9 @@ const TeamCard = () => {
     <>
       <h1 className="heading">OUR TEAMS</h1>
       <div className="team-cards">
-        {profileTeam.map((pitem) => {
+        {profileTeam.map((pitem, index) => {
           return (
-            <div className="team-card-container">
+            <div className="team-card-container" key={`team-${index}`}>
               <div className="team-card">
                 <img src={pitem.profile_img} alt="" />
                 <div className="card-content">

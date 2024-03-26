@@ -5,9 +5,9 @@ const GalleryItems = () => {
     <>
       <h1 className="heading ">Our Gallery</h1>
       <div className="gallery-boxe-container">
-        {galleryItems.map((gitem) => {
+        {galleryItems.map((gitem, index) => {
           return (
-            <div className="gallery-box">
+            <div className="gallery-box" key={`gallery-${index}`}>
               <img src={gitem.g_img} alt="" className="gallery-image" />
             </div>
           );

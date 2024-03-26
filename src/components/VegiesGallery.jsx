@@ -2,7 +2,7 @@ import React from 'react';
 import { productBoxItems } from '../../GDItems';
 import VegiesCard from './VegiesCard';
 
-const VegiesGallery = () => {
+const VegiesGallery = ({ clickHandler }) => {
   return (
     <>
       <div className="left-product-section">
@@ -13,13 +13,17 @@ const VegiesGallery = () => {
       </div>
 
       <div className="right-product-section">
-        {productBoxItems.map(({ p_img, p_name, p_price, p_discount }) => {
-          return (
-            <>
-              <VegiesCard p_img={p_img} p_name={p_name} p_price={p_price} p_discount={p_discount} />
-            </>
-          );
-        })}
+        {productBoxItems.map(({ product_img, product_name, p_discount, product_price, id }, index) => (
+          <VegiesCard
+            key={`products-${index}`}
+            product_img={product_img}
+            product_name={product_name}
+            product_price={product_price}
+            p_discount={p_discount}
+            id={id}
+            clickHandler={clickHandler}
+          />
+        ))}
       </div>
     </>
   );

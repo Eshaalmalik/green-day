@@ -1,11 +1,11 @@
 import React from 'react';
 
 import FruitsGallery from './FruitsGallery';
-const Fruits = () => {
+const Fruits = ({ clickHandler }) => {
   return (
     <>
       <div className="product-container .container fruits">
-        <FruitsGallery />
+        <FruitsGallery clickHandler={clickHandler} />
       </div>
     </>
   );

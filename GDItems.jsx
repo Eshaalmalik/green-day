@@ -9,9 +9,9 @@ import { GoClockFill } from 'react-icons/go';
 import { FaLocationArrow } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
-import { AiOutlineShopping } from 'react-icons/ai';
 import { IoSearchOutline } from 'react-icons/io5';
 import { HiBars3 } from 'react-icons/hi2';
+// import ShoppingCart from './src/components/ShoppingCart';
 
 export const navItems = [
   {
@@ -35,18 +35,93 @@ export const navItems = [
     nav_item: 'Gallery',
   },
   {
-    id: 5,
+    id: 6,
     nav_item: 'Contact Us',
+  },
+];
+
+export const cartitems = [
+  {
+    id: 1,
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-mini-1-108x100.png',
+    product_name: 'Blueberries',
+    cart_del: '-',
+    cart_add: '+',
+    product_quantity: '8',
+    product_price: '$550',
+  },
+  {
+    id: 2,
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-mini-2-108x100.png',
+    product_name: 'Avacados',
+    cart_del: '-',
+    cart_add: '+',
+    product_quantity: '5',
+    product_price: '$250',
+  },
+];
+// --------------Products box items  vegies----------
+export const productBoxItems = [
+  {
+    id: 1,
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-5-270x280.png',
+    product_name: 'Avacados',
+    product_price: '$59:00',
+    p_discount: '$28:00',
+  },
+  {
+    id: 2,
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-6-270x280.png',
+    product_name: 'Corn',
+    product_price: '$28:00',
+  },
+  {
+    id: 3,
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-8-270x280.png',
+    product_name: 'Artichokes',
+    product_price: '$27:00',
+  },
+  {
+    id: 4,
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-7-270x280.png',
+    product_name: 'Broccoli',
+    product_price: '$25:00',
+  },
+];
+
+// --------------Products box items  fruits----------
+
+export const productFruits = [
+  {
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-1-270x280.png',
+    product_name: 'Peaches',
+    product_price: '$59:00',
+    p_discount: '$28:00',
+  },
+  {
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-3-270x280.png',
+    product_name: 'Apples',
+    product_price: '$21:00',
+  },
+  {
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-4-270x280.png',
+    product_name: 'Kiwis',
+    product_price: '$27:00',
+  },
+  {
+    product_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-2-270x280.png',
+    product_name: 'Blueberries',
+    product_price: '$25:00',
   },
 ];
 
 // -----------navbar icons----------
 
 export const navbarIcons = [
-  {
-    id: 1,
-    nav_icon: <AiOutlineShopping className="nav-icon" />,
-  },
+  // {
+  //   id: 1,
+  //   nav_icon: <ShoppingCart className="nav-icon" />,
+  // },
   {
     id: 2,
     nav_icon: <IoSearchOutline className="nav-icon" />,
@@ -69,58 +144,6 @@ export const GDFeaturesItems = [
   {
     feature_icon: <GoSun className="feature_icon" />,
     title: 'Dedicated Team',
-  },
-];
-
-// --------------Products box items  vegies----------
-
-export const productBoxItems = [
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-5-270x280.png',
-    p_name: 'Avacados',
-    p_price: '$59:00',
-    p_discount: '$28:00',
-  },
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-6-270x280.png',
-    p_name: 'Corn',
-    p_discount: '$28:00',
-  },
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-8-270x280.png',
-    p_name: 'Artichokes',
-    p_discount: '$27:00',
-  },
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-7-270x280.png',
-    p_name: 'Broccoli',
-    p_discount: '$25:00',
-  },
-];
-
-// --------------Products box items  fruits----------
-
-export const productFruits = [
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-1-270x280.png',
-    p_name: 'Peaches',
-    p_price: '$59:00',
-    p_discount: '$28:00',
-  },
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-3-270x280.png',
-    p_name: 'Apples',
-    p_discount: '$21:00',
-  },
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-4-270x280.png',
-    p_name: 'Kiwis',
-    p_discount: '$27:00',
-  },
-  {
-    p_img: 'https://ld-wt73.template-help.com/wt_prod-22316/images/product-2-270x280.png',
-    p_name: 'Blueberries',
-    p_discount: '$25:00',
   },
 ];
 
